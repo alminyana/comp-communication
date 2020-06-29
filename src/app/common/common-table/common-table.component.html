@@ -1,3 +1,22 @@
 <p>
   common-table works!
 </p>
+
+<p>common-table works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <td *ngFor="let title of headers">
+                {{ title }}
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of data">
+            <td *ngFor="let column of getAttributes(obj)">
+                {{ obj[column] }}
+            </td>
+        </tr>
+    </tbody>
+</table>
