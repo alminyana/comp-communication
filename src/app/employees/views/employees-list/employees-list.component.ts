@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeesListService } from '../service/employees-list.service';
+import { ResultList } from '../../../core/interfaces/result-list.interface';
+import { Employee } from '../../model/employee.interface';
 
 @Component({
   selector: 'app-employees-list',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesListComponent implements OnInit {
 
-  constructor() { }
+  model: ResultList<Employee>;
+
+  constructor(private readonly service: EmployeesListService) {
+    this.service.modelChanges.subscribe(
+      (model) => {
+        this.model = model;
+      }
+      );
+    }
 
   ngOnInit() {
+    this.service.getData();
+    console.log(this.model);
   }
 
 }
