@@ -6,17 +6,19 @@ import { AppComponent } from './app.component';
 import { EmployeesListComponent } from './employees/views/employees-list/employees-list.component';
 import { CommonTableComponent } from './common/common-table/common-table.component';
 import { CoreModule } from './core/core.module';
+import { CommonModule } from '@angular/common';
+import { EmployeesModule } from './employees/employees.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesListComponent,
-    CommonTableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    CommonModule,
+    EmployeesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
