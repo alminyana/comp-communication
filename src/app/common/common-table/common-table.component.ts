@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-common-table',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./common-table.component.scss']
 })
 export class CommonTableComponent implements OnInit {
+
+  @Input() headers: string;
+  @Input() data: any;
 
   constructor() { }
 
