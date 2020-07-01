@@ -9,8 +9,9 @@ import { ControlsModule } from '../core/controls/controls.module';
     declarations: [
         EmployeesListComponent,
         EmployeesTableComponent,
-        EmployeesFormComponent,
+        EmployeesFormComponent
     ],
+    entryComponents: [EmployeesFormComponent],
     imports: [
         CommonModule,
         ControlsModule

@@ -4,6 +4,7 @@ import { Employee } from '../../model/employee.interface';
 import { ResultList } from '../../../core/interfaces/result-list.interface';
 import { EmployeesListRemoteService } from './employees-list-remote.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { EmployeesFormComponent } from '../../components/employees-form/employees-form.component';
 
 @Injectable({
     providedIn: 'root'
@@ -27,8 +28,13 @@ export class EmployeesListService {
         this.model.next(data);
     }
 
-    public openAddEmployee(data: Employee) {
-
+    public openAddEmployee() {
+        const modal = this.modalService.open(EmployeesFormComponent);
+        modal.result.then((value) => {
+            if (value) {
+              this.getData();
+            }
+          });
     }
 
     public openUpdateEmployee(data: Employee) {
