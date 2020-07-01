@@ -38,6 +38,9 @@ export class EmployeesListService {
     }
 
     public openUpdateEmployee(data: Employee) {
-        // const modal = this.modalService.open();
+        const modal = this.modalService.open(EmployeesFormComponent);
+        const instance = modal.componentInstance as EmployeesFormComponent;
+        instance.setData(data);
+        modal.result.then( (value) => this.getData());
     }
 }
