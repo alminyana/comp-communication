@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
 import { EmployeesModule } from './employees/employees.module';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { EmployeesModule } from './employees/employees.module';
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
+    NgbModule,
     CoreModule,
     CommonModule,
     EmployeesModule

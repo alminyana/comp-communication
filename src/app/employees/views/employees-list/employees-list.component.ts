@@ -25,4 +25,16 @@ export class EmployeesListComponent implements OnInit {
     console.log(this.model);
   }
 
+  openAddEmployee() {
+    this.service.openAddEmployee();
+  }
+
+  openUpdateEmployee(event: Employee) {
+    this.service.openUpdateEmployee(event);
+  }
+
+  deleteEmployee(event: Employee) {
+    this.service.deleteEmployee(event);
+  }
+
 }
