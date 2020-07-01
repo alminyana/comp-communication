@@ -26,7 +26,7 @@ export class EmployeesListComponent implements OnInit {
   }
 
   openAddEmployee() {
-    this.service.openAddEmployee();
+    // this.service.openAddEmployee();
   }
 
 }

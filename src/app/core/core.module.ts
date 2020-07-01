@@ -6,10 +6,9 @@ import { InputTextComponent } from './controls/components/input-text/input-text.
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [InputTextComponent],
+  declarations: [],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     HeaderModule
   ],
   exports: [HeaderComponent],

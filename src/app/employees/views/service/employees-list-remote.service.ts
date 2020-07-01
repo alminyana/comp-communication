@@ -32,7 +32,13 @@ export class EmployeesListRemoteService extends RemoteService {
         this.employeeList.push(employee);
     }
 
-    updateEmployee(data: Employee) {
+    updateEmployee(employee: Employee) {
+        const data = this.employeeList.find( (obj: Employee) => obj.id === employee.id);
+        Object.assign(data, employee);
+    }
 
+    deleteEmployee(employee: Employee) {
+        const index = this.employeeList.findIndex( (obj: Employee) => obj.id === employee.id);
+        this.employeeList.splice(index, 1);
     }
 }
