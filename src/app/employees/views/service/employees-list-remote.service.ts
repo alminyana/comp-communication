@@ -1,27 +1,38 @@
 import { Injectable } from '@angular/core';
 import { Employee } from '../../model/employee.interface';
 import { ResultList } from '../../../core/interfaces/result-list.interface';
+import { RemoteService } from '../../../core/types/remote.service';
+import { AppUtils } from '../../../core/utils/app-utils';
 
 @Injectable({
     providedIn: 'root'
 })
-export class EmployeesListRemoteService {
+export class EmployeesListRemoteService extends RemoteService {
 
-    private employeeList: Employee[];
+    private employeeList: Employee[] = [];
 
     getList(): ResultList<Employee> {
         if (!this.employeeList || !this.employeeList.length) {
-            this.employeeList = [];
             for (let i = 0; i < 6; i++) {
                this.employeeList.push({
                    id: i,
                    name: `Name ${i}`,
                    surname: `Surname ${i}`,
-                   code: 0
+                   code: AppUtils.generateNum()
                });
             }
         }
 
         return {list: this.employeeList};
+    }
+
+    addEmployee(employee: Employee): void {
+        employee.id = this.employeeList.length;
+        employee.code = AppUtils.generateNum();
+        this.employeeList.push(employee);
+    }
+
+    updateEmployee(data: Employee) {
+
     }
 }
