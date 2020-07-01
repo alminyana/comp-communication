@@ -33,4 +33,8 @@ export class EmployeesListComponent implements OnInit {
     this.service.openUpdateEmployee(event);
   }
 
+  deleteEmployee(event: Employee) {
+    this.service.deleteEmployee(event);
+  }
+
 }

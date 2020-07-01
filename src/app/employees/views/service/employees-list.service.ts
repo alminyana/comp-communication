@@ -43,4 +43,8 @@ export class EmployeesListService {
         instance.setData(data);
         modal.result.then( (value) => this.getData());
     }
+
+    public deleteEmployee(data: Employee) {
+        this.remoteSrv.deleteEmployee(data);
+    }
 }
