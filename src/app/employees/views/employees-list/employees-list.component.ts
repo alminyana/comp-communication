@@ -13,16 +13,13 @@ export class EmployeesListComponent implements OnInit {
   model: ResultList<Employee>;
 
   constructor(private readonly service: EmployeesListService) {
-    this.service.modelChanges.subscribe(
-      (model) => {
+    this.service.modelChanges.subscribe( (model) => {
         this.model = model;
-      }
-      );
+      });
     }
 
   ngOnInit() {
     this.service.getData();
-    console.log(this.model);
   }
 
   openAddEmployee() {

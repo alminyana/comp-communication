@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { EmployeesModule } from './employees/employees.module';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InvoicesListComponent } from './invoices/views/invoices-list/invoices-list.component';
+import { InvoicesModule } from './invoices/invoices.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     CoreModule,
     CommonModule,
-    EmployeesModule
+    EmployeesModule,
+    InvoicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
