@@ -24,6 +24,7 @@ export class EmployeesFormComponent extends ModalComponent<Employee> {
       id: [null, []],
       name: [null, [Validators.required]],
       surname: [null, [Validators.required]],
+      external: [null, []],
       code: [null, []]
     });
   }

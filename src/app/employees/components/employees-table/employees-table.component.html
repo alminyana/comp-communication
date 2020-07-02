@@ -7,6 +7,7 @@
   <tr>
     <th>Nombre</th>
     <th>Apellido</th>
+    <th>Externo</th>
     <th>Codigo</th>
     <th></th>
   </tr>
@@ -15,6 +16,7 @@
   <tr *ngFor="let employee of model.list">
     <td>{{employee.name}}</td>
     <td>{{employee.surname}}</td>
+    <td>{{employee.external}}</td>
     <td>{{employee.code}}</td>
     <td class="text-right">
       <button class="btn btn-primary mr-2" (click)="update.emit(employee)">
