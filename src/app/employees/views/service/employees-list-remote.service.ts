@@ -18,6 +18,7 @@ export class EmployeesListRemoteService extends RemoteService {
                    id: i,
                    name: `Name ${i}`,
                    surname: `Surname ${i}`,
+                   external: i % 2 === 0 ? true : false,
                    code: AppUtils.generateNum()
                });
             }
