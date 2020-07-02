@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'employees',
     component: EmployeesListComponent,
-  },
+  }
 ];
 
 @NgModule({

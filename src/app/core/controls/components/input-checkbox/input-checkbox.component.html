@@ -1,0 +1,11 @@
+
+<div class="form-group form-check">
+  <input [type]="type"
+         [formControl]="control"
+         class="form-check-input"
+         [attr.id]="name"
+         [value]="control.value"
+         [checked]="control.value">
+         
+  <label class="form-check-label" [attr.for]="name">{{ label }}</label>
+</div>
