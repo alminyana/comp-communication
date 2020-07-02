@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h4 class="modal-title">Empleado</h4>
+  <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="col-12">
+    <app-input-text [control]="form.get('street')" [name]="'street'" [label]="'Calle'"></app-input-text>
+  </div>
+  <div class="col-12">
+    <app-input-text [control]="form.get('streetType')" [name]="'streetType'" [label]="'Tipo Avenida'"></app-input-text>
+  </div>
+  <div class="col-12">
+    <app-input-text [control]="form.get('municipality')" [name]="'municipality'" [label]="'Municipio'"></app-input-text>
+  </div>
+  <div class="col-6">
+    <app-input-text [control]="form.get('province')" [name]="'province'" [label]="'Provincia'"></app-input-text>
+  </div>
+  <div class="col-6">
+    <app-input-text [control]="form.get('zipCode')" [name]="'zipCode'" [label]="'C.P.'"></app-input-text>
+  </div>
+  
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="submit()">Guardar</button>
+</div>

@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-right">
+          <button type="button" class="btn btn-primary" (click)="create.emit()">
+              + Añadir
+          </button>
+      </div>
+  </div>
+  <div class="row" *ngFor="let item of model.list">
+      <div class="col-12">
+          <h5>{{ item.streetType}}: <span class="text text-danger">{{ item.street}}</span></h5>
+          <p>Provincia: {{item.province}} | Codi Postal: {{item.zipCode}}</p>
+          <hr/>
+      </div>
+  </div>
+</div>
