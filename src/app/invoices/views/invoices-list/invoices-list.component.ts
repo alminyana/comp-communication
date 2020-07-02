@@ -15,12 +15,16 @@ export class InvoicesListComponent implements OnInit {
   constructor(private service: InvoicesListService) {
     this.service.modelChanges.subscribe( (model) => {
       this.model = model;
-      console.log(model);
     });
   }
 
   ngOnInit() {
     this.service.getData();
+  }
+
+  onCreateInvoice() {
+    console.log('create Invoice clicked');
+    this.service.openAddInvoice();
   }
 
 }

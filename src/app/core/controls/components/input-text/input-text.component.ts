@@ -11,7 +11,8 @@ export class InputTextComponent extends ControlComponent implements OnInit {
   validators;
 
   ngOnInit(): void {
-    this.validators = this.control.validator(this.control);
+    if (this.control.validator) {
+      this.validators = this.control.validator(this.control);
+    }
   }
-
 }

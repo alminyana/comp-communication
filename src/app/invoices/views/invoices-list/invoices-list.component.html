@@ -2,4 +2,4 @@
   invoices-list works!
 </p>
 
-<app-invoice-table [model]="model"></app-invoice-table>
+<app-invoice-table [model]="model" (create)="onCreateInvoice()"></app-invoice-table>

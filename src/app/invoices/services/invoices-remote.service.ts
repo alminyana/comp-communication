@@ -24,4 +24,9 @@ export class InvoicesRemoteService {
 
         return {list: this.invoiceList};
     }
+
+    addInvoice(data: Invoice) {
+        data.id = this.invoiceList.length;
+        this.invoiceList.push(data);
+    }
 }
